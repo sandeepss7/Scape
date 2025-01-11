@@ -1,0 +1,86 @@
+.sc-tilesout {
+  padding: 20px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+
+  &__firstsection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+}
+/* Style for the tab content */
+.sc-tabs__content {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #f37321;
+  border-radius: 4px;
+  background: #f9f9f9;
+  display: none;
+  hr {
+    height: 2px;
+    background-color: #767676;
+  }
+  .sc-head {
+    color: #f37321;
+  }
+  &.visible {
+    display: block;
+  }
+}
+.sc-tabs__content.hidden {
+  display: none;
+  visibility: hidden;
+  height: 0; 
+}
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+/* Highlight active tile */
+.sc-tile.active .sc-tile__cta a {
+  background-color: #f37321; /* New background for the active button */
+  color: #ffffff; /* Change text color for the active button */
+  border: 1px solid #f37321; /* Match border with background */
+}
+
+@include tablet {
+  .sc-tilesout {
+    &__firstsection  {
+      &:nth-child(2) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1180px){
+  .sc-tilesout {
+    &__firstsection  {
+      &:nth-child(2) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .sc-tilesout {
+    &__firstsection {
+      flex-direction: column;
+      padding: 0 24px;
+    }
+  }
+}
