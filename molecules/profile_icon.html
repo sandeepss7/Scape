@@ -17,11 +17,15 @@
 
 <body style="background-color: black;">
   <!-- body content start -->
-  <div href="#" class="sc-profile">
+  <div id="ProfileICN" class="sc-profile">
     <div class="sc-profile__icon">
     </div>
     <div class="dropdown">
       <ul>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">My Account</a></li>
         <li><a href="#">My Account</a></li>
       </ul>
     </div>
@@ -29,17 +33,39 @@
   <!-- body content end -->
   <script>
     // Select the elements
-    const profile = document.querySelector('.sc-profile');
-    const dropdown = document.querySelector('.dropdown');
+    // const profile = document.querySelector('.sc-profile');
+    // const dropdown = document.querySelector('.dropdown');
 
-    // Add event listeners for hover
-    profile.addEventListener('mouseenter', () => {
-      dropdown.style.display = 'block'; // Show dropdown
-    });
+    // // Add event listeners for hover
+    // profile.addEventListener('mouseenter', () => {
+    //   dropdown.style.display = 'block'; // Show dropdown
+    // });
 
-    profile.addEventListener('mouseleave', () => {
-      dropdown.style.display = 'none'; // Hide dropdown
-    });
+    // profile.addEventListener('mouseleave', () => {
+    //   dropdown.style.display = 'none'; // Hide dropdown
+    // });
+
+
+
+    /* delay */
+    document.addEventListener('DOMContentLoaded', function () {
+            const menu = document.getElementById('ProfileICN');
+            let hoverTimeout;
+
+            menu.addEventListener('mouseenter', function () {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = setTimeout(() => {
+                    menu.classList.add('active');
+                }, 500); // Shorter delay for better UX
+            });
+
+            menu.addEventListener('mouseleave', function () {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = setTimeout(() => {
+                    menu.classList.remove('active');
+                }, 800); // Short delay before closing
+            });
+        });
   </script>
   <!-- scripts -->
   <script src="../assets/js/jquery.slim.min.js"></script>

@@ -5,6 +5,16 @@
  padding-top: 30px;
  padding-left: 10px;
  display: inline-block;
+
+  &.active .dropdown {
+    max-height: 500px;
+    transition: max-height 0.50s ease-in;
+  }
+
+  &.active .sc-profile__icon::after {
+    transform: scaleX(1);
+  }
+
   &__icon {
     width: 25px;
     height: 25px;
@@ -42,19 +52,26 @@
   }
 
   .dropdown {
-    display: none;
+    // display: none;
+    // position: absolute;
+    // top: 100%;
+    // left: 10px;
+    // background-color: #ffffff;
+    // border-radius: 0px;
+    // color: #303030;
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    // border-radius: 4px;
+    // z-index: 1000;
+    // min-width: 150px;
+    // transition: max-height 0.50s ease-out;
+    max-height: 0;
+    transition: max-height 0.50s ease-out;
+    overflow: hidden;
+    background: #d5d5d5;
     position: absolute;
     top: 100%;
-    left: 0;
-    background-color: #ffffff;
-    border-radius: 0px;
-    color: #303030;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    z-index: 1000;
-    min-width: 150px;
-    transition: transform .35s ease-in;
-
+    margin: 0px;
+    width: 120px;
     
     ul {
       list-style: none;
