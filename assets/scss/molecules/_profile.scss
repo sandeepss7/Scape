@@ -3,7 +3,7 @@
   width: 30px;
  padding-bottom: 32px;
  padding-top: 30px;
- padding-left: 10px;
+ padding-left: 28px;
  display: inline-block;
 
   &.active .dropdown {
@@ -96,7 +96,9 @@
           font-size: 14px;
           border-radius: 0px;
           background-color: #fff;
-
+          font-family: OpenSans, Helvetica, Arial, sans-serif;
+          font-weight: 600;
+          color: #303030;
           &:hover {
             background-color: #848484;
             color: #fff;
@@ -116,14 +118,37 @@
 .menu-only-mobile {
     display: none;
   }
+
+@include tablet-pro {
+  .header.main-header .container .header-sticky .navigation.desktop {
+    justify-content: flex-start;
+  }
+  .header.main-header .container .header-sticky .navigation.desktop .api-search__wrap .input-text {
+    padding: 8px 10px 8px 15px;
+  }
+  .header.main-header .container .header-sticky .navigation.desktop .nav-main.desktop-nav .nav-main__features .menu>li>a {
+    margin: 0 24px 0 0;
+  }
+}
 @include mobile {
     .menu-only-mobile {
         display: block;
+        a {
+          background-color: #fff;
+          color: #000 !important;
+          padding-left: 8px !important;
+        }
       }
+      
 }
 
 @include tablet {
     .menu-only-mobile {
         display: block;
+        a {
+          background-color: #fff;
+          color: #000 !important;
+          padding-left: 8px !important;
+        }
       }
 }
