@@ -120,6 +120,16 @@
   }
 
 @include tablet-pro {
+  .sc-profile {
+    padding-left: 16px;
+    .dropdown {
+      right: -11px;
+    }
+    .navigation .desktop {
+      justify-content: flex-start;
+    }
+  }
+
   .header.main-header .container .header-sticky .navigation.desktop {
     justify-content: flex-start;
   }
@@ -137,6 +147,9 @@
           background-color: #fff;
           color: #000 !important;
           padding-left: 8px !important;
+          text-align: center;
+          border-radius: 6px;
+          padding: 12px 0 !important;
         }
       }
       
@@ -149,6 +162,9 @@
           background-color: #fff;
           color: #000 !important;
           padding-left: 8px !important;
+          text-align: center;
+          border-radius: 6px;
+          padding: 12px 0 !important;
         }
       }
 }
