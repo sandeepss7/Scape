@@ -3,7 +3,7 @@
     overflow: hidden;
 
     &__outer {
-        min-height: 100vh;
+        min-height: 84vh;
         background-color: #eee;
         display: flex;
         flex-direction: column;
@@ -17,9 +17,11 @@
     }
 
     &__logo {
-        font-weight: bold;
-        font-size: 1.5rem;
-        color: #fff;
+        width: 10%;
+
+        img {
+            width: 100%;
+        }
     }
 
     &__maincontent {
@@ -115,6 +117,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
 
         a {
             color: #fff;
@@ -160,6 +165,10 @@
         &__logincontainer {
             max-width: 700px;
         }
+
+        &__logo {
+            width: 17%;
+        }
     }
 }
 
@@ -168,11 +177,20 @@
         &__logincontainer {
             max-width: 650px;
         }
+
+        &__logo {
+            width: 20%;
+        }
     }
 }
 
 @include mobile {
     .sc-login {
+
+        .container {
+            padding: 0px 20px;
+        }
+
         &__header {
             padding: 20px 20px 15px 20px;
         }
