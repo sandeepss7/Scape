@@ -18,10 +18,63 @@
         background-size: cover;
     }
     &__scapelogo {
-        width: 100%;
-        margin-top: 20px;
+        width: 180px;
+        margin: 70px auto;
         img {
             width: 100%;
+        }
+    }
+    &__footertxt {
+        text-align: center;
+        margin-top: 60px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #666262;
+    }
+}
+
+@include tablet-pro { 
+    .sc-nwlogin {
+        &__leftimg {
+            img {
+                min-height: 100vh;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .sc-nwlogin {
+        &__left {
+            width: 0;
+        }
+        &__right {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        &__scapelogo {
+            margin: 30% auto 30px;
+        }
+        &__footertxt {
+            margin-top: 30px;
+        }
+    }
+}
+@include mobile {
+    .sc-nwlogin {
+        &__left {
+            width: 0;
+        }
+        &__right {
+            width: 100%;
+        }
+        &__scapelogo {
+            width: 130px;
+            margin: 50px auto 30px;
+        }
+        &__footertxt {
+            margin-top: 30px;
         }
     }
 }
