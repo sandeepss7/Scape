@@ -1,10 +1,8 @@
 .sc-profile {
   position: relative;
   width: 30px;
- padding-bottom: 32px;
- padding-top: 30px;
- padding-left: 28px;
- display: inline-block;
+  padding-left: 28px;
+  display: inline-block;
 
   &.active .dropdown {
     max-height: 500px;
@@ -70,8 +68,8 @@
     background: #d5d5d5;
     position: absolute;
     top: 100%;
-    margin: 0px;
-    width: 120px;
+    margin-top: 34px;
+    width: 130px;
     
     ul {
       list-style: none;
@@ -118,6 +116,40 @@
 .menu-only-mobile {
     display: none;
   }
+.header-sticky {
+  align-items: center !important;
+}
+.logo-img a .custom-logo {
+  margin-bottom: 14px;
+}
+.header-sticky .navigation .desktop {
+  margin-right: -30px;
+}
+.headroom--unpinned {
+  .logo-img a .custom-logo {
+    margin-bottom: 0;
+  }
+}
+.headroom--unpinned {
+  .sc-profile .dropdown {
+    margin-top: 26px;
+  }
+}
+.headroom--unpinned {
+  .sc-profile__icon {
+    &::after {
+      bottom: -24px;
+    }
+  }
+}
+.headroom--not-top {
+  padding: 6px 0 9px;
+}
+.menu .megamenu {
+  li a {
+    margin: 0 24px 0 0;
+  }
+}
 
 @include tablet-pro {
   .sc-profile {
@@ -125,20 +157,21 @@
     .dropdown {
       right: -11px;
     }
-    .navigation .desktop {
-      justify-content: flex-start;
-    }
+  }
+  .header-sticky .navigation .desktop {
+    justify-content: flex-start;
+    margin-right: 0;
   }
 
-  .header.main-header .container .header-sticky .navigation.desktop {
-    justify-content: flex-start;
-  }
-  .header.main-header .container .header-sticky .navigation.desktop .api-search__wrap .input-text {
-    padding: 8px 10px 8px 15px;
-  }
-  .header.main-header .container .header-sticky .navigation.desktop .nav-main.desktop-nav .nav-main__features .menu>li>a {
-    margin: 0 24px 0 0;
-  }
+  // .header.main-header .container .header-sticky .navigation.desktop {
+  //   justify-content: flex-start;
+  // }
+  // .header.main-header .container .header-sticky .navigation.desktop .api-search__wrap .input-text {
+  //   padding: 8px 10px 8px 15px;
+  // }
+  // .header.main-header .container .header-sticky .navigation.desktop .nav-main.desktop-nav .nav-main__features .menu>li>a {
+  //   margin: 0 24px 0 0;
+  // }
 }
 @include mobile {
     .menu-only-mobile {
@@ -150,6 +183,11 @@
           text-align: center;
           border-radius: 6px;
           padding: 12px 0 !important;
+        }
+      }
+      .header-sticky {
+        .logo-wrap {
+          padding: 14px !important;
         }
       }
       
@@ -165,6 +203,11 @@
           text-align: center;
           border-radius: 6px;
           padding: 12px 0 !important;
+        }
+      }
+      .header-sticky {
+        .logo-wrap {
+          padding: 14px !important;
         }
       }
 }
