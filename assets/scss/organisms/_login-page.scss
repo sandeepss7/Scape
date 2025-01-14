@@ -35,10 +35,11 @@
 
     &__logincontainer {
         background-color: #f7f7f7;
-        padding: 40px 30px 80px;
+        border: 1px solid #FF8526;
+        padding: 40px 30px;
         width: 100%;
         max-width: 500px;
-        margin: auto;
+        margin: 0 auto;
     }
 
     &__logintitle {
@@ -92,7 +93,7 @@
 
     &__loginbutton {
         font-family: Oswald, Helvetica, Arial, sans-serif;
-        float: right;
+        margin: auto;
         padding: 0.75rem 1.5rem;
         background: transparent;
         border: 2px solid #000;
@@ -213,7 +214,6 @@
 
         &__logincontainer {
             max-width: 300px;
-            padding: 24px 24px 70px;
         }
 
         &__loginbutton {
