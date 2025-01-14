@@ -1,0 +1,215 @@
+.sc-login {
+    background-color: #eee;
+    overflow: hidden;
+
+    &__outer {
+        min-height: 84vh;
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__header {
+        padding: 1rem 2rem;
+        background-color: #000;
+    }
+
+    &__logo {
+        width: 10%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__maincontent {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        position: relative;
+    }
+
+    &__logincontainer {
+        background-color: #eee7e0;
+        padding: 2.5rem;
+        width: 100%;
+        max-width: 500px;
+        border-radius: 4px;
+    }
+
+    &__logintitle {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+    }
+
+    &__emailinput {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    &__passwrd {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    &__infotext {
+        color: #666;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    &__loginbutton {
+        float: right;
+        padding: 0.75rem 1.5rem;
+        background: transparent;
+        border: 2px solid #000;
+        cursor: pointer;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            width: 0;
+            height: 3em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to right, #bebbb9 0%, #bebbb9 100%);
+            transition: .5s ease;
+            display: block;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            
+            width: 100%;
+        }
+    }
+
+    &__footer {
+        background: #000;
+        color: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+        }
+    }
+
+    /* / Decorative elements / */
+    &__decorativeelements {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            width: 50px;
+            height: 50px;
+            border: 3px solid #4B0082;
+            border-radius: 50%;
+        }
+
+        &::after {
+            content: '✨';
+            position: absolute;
+            bottom: 4rem;
+            right: 4rem;
+            font-size: 2rem;
+        }
+    }
+
+}
+
+@include tablet-pro {
+    .sc-login {
+        &__logincontainer {
+            max-width: 700px;
+        }
+
+        &__logo {
+            width: 17%;
+        }
+    }
+}
+
+@include tablet {
+    .sc-login {
+        &__logincontainer {
+            max-width: 650px;
+        }
+
+        &__logo {
+            width: 20%;
+        }
+    }
+}
+
+@include mobile {
+    .sc-login {
+
+        .container {
+            padding: 0px 20px;
+        }
+
+        &__header {
+            padding: 20px 20px 15px 20px;
+        }
+
+        &__maincontent {
+            padding: 10px 20px 20px 20px;
+        }
+
+        &__footer {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__tandc {
+            margin-top: 10px;
+
+            a:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
