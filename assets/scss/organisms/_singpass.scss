@@ -7,9 +7,61 @@
     background-color: #000;
     height: 12vh;
   }
+  &__dropdown {
+    .dropdown-toggle::after {
+      display: none;
+    }
+    .btn-check:checked+.btn, 
+    .btn.active, 
+    .btn.show, 
+    .btn:first-child:active, 
+    :not(.btn-check)+.btn:active {
+      border: 0;
+    }
+    .btn:focus {
+      box-shadow: none;
+    }
+    .dropdown-menu {
+      background-color: #000;
+      text-align: center;
+      padding: 8px 12px;
+      inset: 25px 7px auto auto !important;
+
+      li {
+        border-bottom: 1px solid #fff;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+    .dropdown-item {
+      font-family: "Oswald", serif;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 0;
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
   &__logo {
     width: 140px;
 }
+  &__eventimg {
+    width: 36%;
+    margin-bottom: 32px;
+    img {
+      width: 100%;
+    }
+  }
+  &__eventtxt1 {
+    color:#F28742;
+  }
+  &__eventtxt2 {
+    color:#000;
+  }
   &__footer {
     background: #000;
     color: #fff;
@@ -23,14 +75,47 @@
         text-decoration: none;
     }
 }
-  &__left, &__right {
+  &__left, &__right {  
     width: 20%;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: end;
   }
 
   &__content {
     width: 700px;
-    margin: 50px auto 0;
+    margin: 50px auto 32px;
+    min-height: auto;
+    max-height: 450px;
   }
+
+  .sc-info__content::-webkit-scrollbar {
+    margin-top: 20px;
+    margin-right: 50px;
+    width: 8px;
+    /* Set the height of the scrollbar */
+  }
+  
+  .sc-info__content::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Roundness of the scrollbar */
+  }
+  
+  .sc-info__content::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc;
+    /* Darker color when hovering */
+  }
+  
+  .sc-info__content::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+  }
+  
   h2 {
     font-family: "Oswald", serif;
   }
@@ -68,6 +153,37 @@
       text-decoration: underline;
     }
   }
+  &__nextbutton {
+    font-family: Oswald, Helvetica, Arial, sans-serif;
+    float: right;
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid #000;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 3em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, #bebbb9 0%, #bebbb9 100%);
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+    }
+
+    &:hover::before {   
+        width: 100%;
+    }
+}
 }
 
 @include tablet-pro {
@@ -123,11 +239,11 @@
         padding: 7px;
       }
     }
-    &__head {
+    h2 {
       font-size: 22px;
     }
     &__box {
-      padding: 24px;
+      padding: 20px 24px;
       p {
         font-size: 14px;
       }
@@ -136,5 +252,9 @@
       font-size: 14px;
       margin-top: 10px;
     }
+    &__nextbutton {
+      font-size: 12px;
+      padding: 10px 16px;
+  }
   }
 }
