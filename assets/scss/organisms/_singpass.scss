@@ -23,6 +23,7 @@
     }
     .dropdown-menu {
       background-color: #000;
+      opacity: 0.7;
       text-align: center;
       padding: 8px 12px;
       inset: 25px 7px auto auto !important;
@@ -122,6 +123,9 @@
   &__box {
     background-color: #EEE7E0;
     padding: 30px;
+  }
+  &__ty {
+    padding: 40px 40px 70px;
   }
   &__btnwrap {
 
@@ -248,9 +252,15 @@
         font-size: 14px;
       }
     }
+    &__ty {
+      padding: 20px 24px;
+    }
     &__txt {
       font-size: 14px;
       margin-top: 10px;
+    }
+    &__para {
+      font-size: 16px !important;
     }
     &__nextbutton {
       font-size: 12px;
