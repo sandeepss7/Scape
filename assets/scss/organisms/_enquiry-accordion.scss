@@ -1,0 +1,22 @@
+.sc-enquiry {
+    margin: 20px 40px;
+
+    .accordion-button:focus {
+        box-shadow: none;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: transparent;
+        color: #000;
+    }
+    .accordion-item {
+        border: 1px solid #ccc;
+        margin-top: 14px;
+    }
+    .accordion-flush .accordion-item:first-child {
+        border: 1px solid #ccc;
+    }
+    .accordion-flush .accordion-item:last-child {
+        border: 1px solid #ccc;
+    }
+}
