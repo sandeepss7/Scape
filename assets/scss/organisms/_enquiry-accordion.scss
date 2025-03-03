@@ -1,79 +1,112 @@
 .sc-enquiry {
-    margin: 20px 40px;
+  margin: 20px 40px;
 
-    .accordion-button:focus {
-        box-shadow: none;
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #000;
+    gap: 22px;
+  }
+  .accordion-button:hover {
+    background-color: #f37321;
+    color: #fff;
+    transition: 0.3s ease-in-out;;
+    &::after {
+      background-image: url("../images/Arrow\ _white.svg");
+      width: 40px;
+      background-size: 40px 26px;
+      height: 26px;
     }
 
-    .accordion-button:not(.collapsed) {
-        background-color: transparent;
-        color: #000;
-        gap: 22px;
+    &::before {
+      background-color: #f37321;
     }
-    .accordion-button:hover {
-        background-color: #F37321;
-        color: #fff;
+
+
+  }
+  .accordion-item {
+    margin-top: 14px;
+    position: relative;
+    // &:hover {
+    //     .sc-enquiry__icon::after {
+    //         background-image: url("../images/W-Advertisement\ and\ Media.svg");
+    //       }
+    // }
+  }
+
+  .accordion-header {
+    position: relative;
+    border: 1px solid #d9d9d9;
+
+    // &:hover{
+    //     .sc-enquiry__icon::after {
+    //         background-image: url("../images/W-Advertisement\ and\ Media.svg");
+    //     }
+    // }
+  }
+
+  .accordion-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #d9d9d9;
+    transition: 0s;
+  }
+
+  .accordion-button::after {
+    background-image: url("../images/Arrow_orange.svg");
+    width: 40px;
+    background-size: 40px 26px;
+    height: 26px;
+  }
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(0deg);
+  }
+
+  .accordion-flush .accordion-collapse {
+    border: 1px solid #d9d9d9;
+    margin-top: 20px;
+  }
+  .accordion-flush .accordion-item .accordion-button {
+    gap: 22px;
+  }
+
+//   &__icon {
+//     position: relative;
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       background-image: url("../images/O-Advertisement\ and\ Media.svg");
+//       background-position: center;
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//       width: 32px;
+//       height: 32px;
+//       top: 16px;
+//       left: 22px;
+//     }    
+//   }
+
+    &__icon {
         svg {
-            fill: #fff;
-            stroke: #fff;
+            width: 32px;
+            height: 32px;
         }
-        &::after {
-            background-image: url('../images/Arrow\ _white.svg');
-            width: 40px;
-            background-size: 40px 26px;
-            height: 26px;
-        }
-
-        &::before {
-            background-color: #F37321;
-        }
-
-    }
-    .accordion-item {
-        margin-top: 14px;
-        position: relative;
-
-    }
-
-    .accordion-header {
-        position: relative;
-        border: 1px solid #D9D9D9;
-
-        &__icon {
-            &::after {
-                background-image: url('../../images/O-Advertisement\ and\ Media.svg');
+        &:hover {
+            svg {
+                width: 32px;
+                height: 32px;
+                fill: #fff;
+                stroke: #fff;
+                transition: 0.3s ease-in-out;;
             }
         }
+        
     }
-
-    .accordion-button::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 5px;
-        background-color: #D9D9D9;
-        transition: 0s;
-    }
-
-    .accordion-button::after {
-        background-image: url('../images/Arrow_orange.svg');
-        width: 40px;
-        background-size: 40px 26px;
-        height: 26px;
-    }
-    .accordion-button:not(.collapsed)::after {
-        transform: rotate(0deg);
-    }
-
-    .accordion-flush .accordion-collapse {
-        border: 1px solid #D9D9D9;
-        margin-top: 20px;
-    }
-    .accordion-flush .accordion-item .accordion-button {
-        gap: 22px;
-    }   
-
-   
 }
