@@ -6,19 +6,34 @@
   }
 
   .accordion-button:not(.collapsed) {
-    background-color: transparent;
-    color: #000;
+    background-color: #f37321 !important;
+    color: #fff;
     gap: 22px;
+    box-shadow: none;
+    svg {
+      fill: #fff;
+      stroke: #fff;
+    }
+    &::before {
+      background-color: #f37321;
+    }
+    &::after {
+      background-image: url("../images/Arrow\ _white.svg");
+    }
   }
   .accordion-button:hover {
     background-color: #f37321;
+    border: 1px solid #f37321;
     color: #fff;
-    transition: 0.3s ease-in-out;;
+    transition: 0.3s ease-in-out;
+    .sc-careers {
+      color: #fff;
+    }
     &::after {
       background-image: url("../images/Arrow\ _white.svg");
       width: 40px;
-      background-size: 40px 26px;
-      height: 26px;
+      background-size: 40px 18px;
+      height: 20px;
     }
 
     &::before {
@@ -30,6 +45,8 @@
   .accordion-item {
     margin-top: 14px;
     position: relative;
+    background-color: transparent;
+    border: none;
     // &:hover {
     //     .sc-enquiry__icon::after {
     //         background-image: url("../images/W-Advertisement\ and\ Media.svg");
@@ -39,8 +56,7 @@
 
   .accordion-header {
     position: relative;
-    border: 1px solid #d9d9d9;
-
+    margin-bottom: 0;
     // &:hover{
     //     .sc-enquiry__icon::after {
     //         background-image: url("../images/W-Advertisement\ and\ Media.svg");
@@ -62,8 +78,8 @@
   .accordion-button::after {
     background-image: url("../images/Arrow_orange.svg");
     width: 40px;
-    background-size: 40px 26px;
-    height: 26px;
+    background-size: 40px 18px;
+    height: 20px;
   }
   .accordion-button:not(.collapsed)::after {
     transform: rotate(0deg);
@@ -72,9 +88,12 @@
   .accordion-flush .accordion-collapse {
     border: 1px solid #d9d9d9;
     margin-top: 20px;
+    background: #fff;
   }
   .accordion-flush .accordion-item .accordion-button {
     gap: 22px;
+    border: 1px solid #d9d9d9;
+    padding: 8px 26px;
   }
 
 //   &__icon {
@@ -106,7 +125,17 @@
                 stroke: #fff;
                 transition: 0.3s ease-in-out;;
             }
-        }
-        
+        }      
+    }
+    .accordion-body {
+      background-color: #fff;
+    }
+    .sc-careers {
+      color: #212529 !important;
+
+      &:hover {
+        color: #fff !important;
+        text-decoration: none;
+      }
     }
 }
