@@ -1,11 +1,11 @@
 // base
-// @import "./base/colors";
-// @import "./base/fonts";
-// @import "./base/layout";
-// @import "./base/breakpoints";
-// @import "./base/reset";
-// @import "./base/base";
-// @import "./base/dev";
+@import "./base/colors";
+@import "./base/fonts";
+@import "./base/layout";
+@import "./base/breakpoints";
+@import "./base/reset";
+@import "./base/base";
+@import "./base/dev";
 
 // atoms
 
@@ -18,5 +18,5 @@
 // @import './organisms/chart';
 // @import './organisms/new-login';
 // @import './organisms/singpass';
-@import './organisms/enquiry-accordion';
+// @import './organisms/enquiry-accordion';
 // pages
